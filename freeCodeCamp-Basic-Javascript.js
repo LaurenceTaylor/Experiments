@@ -31,3 +31,18 @@ var myStr = "FirstLine\n\\SecondLine\\\rThirdLine"; // other characters can be e
 
 var myStr = 'This is the start. ' + 'This is the end. '; // use '+' to concatenate strings
 myStr += 'This is another sentence.'; // Use += to add another part to a string quickly
+
+myName = "Laurence";
+myStr = "My name is " + myName + " and it is swell!";
+
+lastNameLength = lastName.length; // length.x gives the length of a string
+
+firstLetterOfLastName = lastName[0]; // [x] gives the character at a specific index of a string
+
+var lastLetterOfLastName = lastName[lastName.length - 1];
+
+#########################################################################################
+// Dealing with arrays
+#########################################################################################
+
+var myArray = ["Laurence", 23];
