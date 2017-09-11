@@ -19,3 +19,8 @@ myVar += 3;
 // is the same as
 myVar = myVar + 3;
 
+#########################################################################################
+// Dealing with strings
+#########################################################################################
+
+var myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // the backslash escapes a quote 
