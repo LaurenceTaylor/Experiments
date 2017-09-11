@@ -45,4 +45,6 @@ var lastLetterOfLastName = lastName[lastName.length - 1];
 // Dealing with arrays
 #########################################################################################
 
-var myArray = ["Laurence", 23];
+var myArray = ["Laurence", 23]; // an array
+
+var myArray = [["Laurence", 23], ["Arsenal", 4]]; // a nested/ multidimensional array
