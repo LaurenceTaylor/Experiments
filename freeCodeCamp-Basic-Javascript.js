@@ -24,3 +24,10 @@ myVar = myVar + 3;
 #########################################################################################
 
 var myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // the backslash escapes a quote 
+
+var myStr = '<a href="http://www.example.com" target="_blank">Link</a>'; // or you can use single and double quote marks together
+
+var myStr = "FirstLine\n\\SecondLine\\\rThirdLine"; // other characters can be escaped: \\, \n, \r, \t, \b, \f
+
+var myStr = 'This is the start. ' + 'This is the end. '; // use '+' to concatenate strings
+myStr += 'This is another sentence.'; // Use += to add another part to a string quickly
