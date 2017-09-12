@@ -53,8 +53,12 @@ var myArray = [["Laurence", 23], ["Arsenal", 4]]; // a nested/ multidimensional 
 
 var myData = myArray[1][0]; // to access data from a multidimensional array, you use two brackets as such
 
+myArray.push(["dog", 3]); // use .push to ammend data (including other arrays) to the end of an array
 
+var removedFromMyArray = myArray.pop(); // .pop() removes the last item from an array and stores it
 
+var removedFromMyArray = myArray.shift(); // .shift() does the same but for the first item
 
+myArray.unshift(["Paul", 35]); // unshift does the same as push, but for the start of an array
 
 
