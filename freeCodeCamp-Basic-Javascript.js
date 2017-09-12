@@ -47,4 +47,14 @@ var lastLetterOfLastName = lastName[lastName.length - 1];
 
 var myArray = ["Laurence", 23]; // an array
 
+myArray[0] = 3; // Unlike strings, arrays are mutable (i.e. they can be changed)
+
 var myArray = [["Laurence", 23], ["Arsenal", 4]]; // a nested/ multidimensional array
+
+var myData = myArray[1][0]; // to access data from a multidimensional array, you use two brackets as such
+
+
+
+
+
+
