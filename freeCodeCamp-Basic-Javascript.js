@@ -61,4 +61,15 @@ var removedFromMyArray = myArray.shift(); // .shift() does the same but for the 
 
 myArray.unshift(["Paul", 35]); // unshift does the same as push, but for the start of an array
 
+#########################################################################################
+// Dealing with functions
+#########################################################################################
 
+function functionWithArgs(a, b) {       // define the function
+  console.log(a + b);
+}
+
+functionWithArgs(231, 823);             // call the function
+
+var myVar = 1   // using var inside a function means that variable has local scope
+globalVar = 1   // even when defined inside a function, without var this variable has global scope
