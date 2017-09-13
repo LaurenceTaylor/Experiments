@@ -73,3 +73,33 @@ functionWithArgs(231, 823);             // call the function
 
 var myVar = 1   // using var inside a function means that variable has local scope
 globalVar = 1   // even when defined inside a function, without var this variable has global scope
+
+#########################################################################################
+// Dealing with booleans & if statements
+#########################################################################################
+
+// true and false are booleans - they are never written in quotes
+
+function trueOrFalse(wasThatTrue) {
+  
+  if (wasThatTrue) {
+    return "Yes, that was true";
+  }
+  
+  else {
+    return "No, that was false";
+  }
+
+/* In order for JavaScript to compare two different data types (for example, numbers and strings), 
+it must convert one type to another. Once it does, however, it can compare terms as follows: */
+
+1   ==  1    // true
+1   ==  2    // false
+1   == '1'   // true
+"3"  ==  3    // true
+
+/* Strict equality (===) is the counterpart to the equality operator (==). 
+Unlike the equality operator, strict equality tests both the data type and value of the compared elements. */
+  
+3 === 3   // true
+3 === '3' // false
