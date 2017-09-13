@@ -1,6 +1,6 @@
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 // Dealing with numbers
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 
 myVar++;
 // this is equivalent to:
@@ -19,9 +19,9 @@ myVar += 3;
 // is the same as
 myVar = myVar + 3;
 
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 // Dealing with strings
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 
 var myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // the backslash escapes a quote 
 
@@ -41,9 +41,9 @@ firstLetterOfLastName = lastName[0]; // [x] gives the character at a specific in
 
 var lastLetterOfLastName = lastName[lastName.length - 1];
 
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 // Dealing with arrays
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 
 var myArray = ["Laurence", 23]; // an array
 
@@ -61,9 +61,9 @@ var removedFromMyArray = myArray.shift(); // .shift() does the same but for the 
 
 myArray.unshift(["Paul", 35]); // unshift does the same as push, but for the start of an array
 
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 // Dealing with functions
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 
 function functionWithArgs(a, b) {       // define the function
   console.log(a + b);
@@ -74,9 +74,9 @@ functionWithArgs(231, 823);             // call the function
 var myVar = 1   // using var inside a function means that variable has local scope
 globalVar = 1   // even when defined inside a function, without var this variable has global scope
 
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 // Dealing with booleans & if statements
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 
 // true and false are booleans - they are never written in quotes
 
@@ -130,9 +130,26 @@ if (num < 5 || num > 10) {
 }
 return "Inside";
 
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
+// N.B., this (below):
+
+function isEqual(a,b) {
+  return a === b;
+}
+
+// is the same as this, just more concise:
+
+function isEqual(a,b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
 // Switches
-#########################################################################################
+/////////////////////////////////////////////////////////////////////////////////////////
 
 // Used to test many options with strict equality
 // example
@@ -151,8 +168,37 @@ function caseInSwitch(val) {
     case 4:
       answer = "delta";
       break;
+    default:                          // use default for when no matching case statements are found
+      answer = "greek letter";
   } 
   return answer;  
 }
-
+// change this value to test
 caseInSwitch(3);
+
+/* If the break statement is omitted from a switch statement's case, 
+the following case statement(s) are executed until a break is encountered. */
+
+function sequentialSizes(val) {
+  var answer = "";
+  switch(val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+      break;
+  }
+  return answer;  
+}
+// Change this value to test
+sequentialSizes(1);
