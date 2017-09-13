@@ -88,7 +88,7 @@ function trueOrFalse(wasThatTrue) {
   
   else {
     return "No, that was false";
-  }
+}}
 
 /* In order for JavaScript to compare two different data types (for example, numbers and strings), 
 it must convert one type to another. Once it does, however, it can compare terms as follows: */
@@ -103,3 +103,24 @@ Unlike the equality operator, strict equality tests both the data type and value
   
 3 === 3   // true
 3 === '3' // false
+
+// Not equal to
+
+3 != 4; // true
+3 != '3' // false
+
+// Strict inequality
+
+3 !== 3 //false
+3 !== '3' // true
+  
+// For when you want two operands to be tested
+// Use && //(AND)
+
+if (num > 5 && num < 10) {
+  return "Yes";
+}
+return "No";
+
+// For when you want either/ or operand to be true
+// Use || (OR)
