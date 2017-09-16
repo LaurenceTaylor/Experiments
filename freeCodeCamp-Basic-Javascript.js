@@ -266,8 +266,12 @@ var tailsValue = cat["tails"];
 
 // Bracket notation can also use variables to look up a property
 
-var someProp = "propName";
-var myObj = {
-  propName: "Some Value"
-}
-myObj[someProp]; // "Some Value"
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+var playerNumber = 16;
+var player = testObj[playerNumber];
+
