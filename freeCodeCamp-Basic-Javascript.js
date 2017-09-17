@@ -275,3 +275,16 @@ var testObj = {
 var playerNumber = 16;
 var player = testObj[playerNumber];
 
+// The properties of a javascript object can be updated at any time, as such:
+
+ourDog.name = "Happy Camper";     // or
+ourDog["name"] = "Happy Camper";
+
+// New properties can also be added in the same way you would update them:
+
+ourDog.bark = "bow-wow";        // or
+ourDog["bark"] = "bow-wow";
+
+// Properties can be deleted from objects as such:
+
+delete ourDog.bark;
