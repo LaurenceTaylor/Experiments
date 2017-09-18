@@ -288,3 +288,61 @@ ourDog["bark"] = "bow-wow";
 // Properties can be deleted from objects as such:
 
 delete ourDog.bark;
+
+/* Objects can be thought of as key/ value storage. 
+If tabular data, objects can be used instead of a switch statement or if/else chain. */
+
+// For example, this:
+
+///////////////////////////////////
+// Setup
+function phoneticLookup(val) {
+  var result = "";
+
+  switch(val) {
+    case "alpha": 
+      result = "Adams";
+      break;
+    case "bravo": 
+      result = "Boston";
+      break;
+    case "charlie": 
+      result = "Chicago";
+      break;
+    case "delta": 
+      result = "Denver";
+      break;
+    case "echo": 
+      result = "Easy";
+      break;
+    case "foxtrot": 
+      result = "Frank";
+  }
+
+  return result;
+}
+///////////////////////////////////
+
+// Can be changed to this:
+
+///////////////////////////////////
+// Setup
+function phoneticLookup(val) {
+  var result = "";
+
+var lookup = {
+  "alpha": "Adams",
+  "bravo": "Boston",
+  "charlie": "Chicago",
+  "delta": "Denver",
+  "echo": "Easy",
+  "foxtrot": "Frank",
+  };
+  
+  result = lookup[val];
+  return result;
+}
+
+// Change this value to test
+phoneticLookup("charlie");
+///////////////////////////////////
