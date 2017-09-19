@@ -148,7 +148,7 @@ function isEqual(a,b) {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
-// Switches
+// Dealing with Switches
 /////////////////////////////////////////////////////////////////////////////////////////
 
 // Used to test many options with strict equality
@@ -345,4 +345,31 @@ var lookup = {
 
 // Change this value to test
 phoneticLookup("charlie");
+///////////////////////////////////
+
+// hasOwnProperty can be used to check if the property of a given object exists, as such:
+
+myObj.hasOwnProperty("propName");   // true or false
+
+// A further example:
+
+///////////////////////////////////
+// Setup
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+  // Your Code Here
+  if (myObj.hasOwnProperty(checkProp)) {
+  return myObj[checkProp];
+  }
+  
+  else return "Not Found";
+}
+
+//test
+checkObj("gift");
 ///////////////////////////////////
