@@ -373,3 +373,34 @@ function checkObj(checkProp) {
 //test
 checkObj("gift");
 ///////////////////////////////////
+
+// Complex Objects
+// A way of storing data in a flexible data structure
+// Allows for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects
+// Example below - an array with two javascript objects within (and subsequent arrays within the objects).
+
+///////////////////////////////////
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [ 
+      "CS", 
+      "8T", 
+      "LP" ],
+    "gold": true
+  },
+  {
+    "artist": "Wilco",
+    "title": "Yankee Hotel Foxtrot",
+    "release_year": 2002,
+    "formats": [
+      "CD",
+      "LP",
+      "Cassette",
+      "MP3"
+    ]
+  }
+];
+///////////////////////////////////
