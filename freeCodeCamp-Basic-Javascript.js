@@ -404,3 +404,12 @@ var myMusic = [
   }
 ];
 ///////////////////////////////////
+
+// Nested objects can be accessed by chaining . or bracket notation, as such:
+
+ourStorage.cabinet["top drawer"].folder2;   // or
+ourStorage.desk.drawer;
+
+// Accessing a nested array can be done in a similar way, just giving the index of the object:
+
+ourPets[0].names[1];
