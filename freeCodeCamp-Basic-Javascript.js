@@ -413,3 +413,29 @@ ourStorage.desk.drawer;
 // Accessing a nested array can be done in a similar way, just giving the index of the object:
 
 ourPets[0].names[1];
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Dealing with for loops
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// The most common type of loop
+// Runs 'for' a specific amount of times
+// Syntax:
+
+for ([initialization]; [condition]; [final-expression]) {
+  // code here
+}
+
+// Initialization is performed once before the loop starts, and sets up the loop variable
+// The condition is evaluated at the start of each loop. If the condition if false, the loop stops executing
+// The final expression is executed at the end of each loop iteration. Usually increments or decrements the loop counter
+// Example below:
+
+// Setup
+var myArray = [];
+
+// Loop
+for (var i = 1; i < 6; i++) {
+  myArray.push(i);
+}
