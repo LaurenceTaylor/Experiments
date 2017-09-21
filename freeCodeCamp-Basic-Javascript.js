@@ -436,6 +436,20 @@ for ([initialization]; [condition]; [final-expression]) {
 var myArray = [];
 
 // Loop
-for (var i = 1; i < 6; i++) {
+for (var i = 1; i < 6; i += 2) {
   myArray.push(i);
+}
+
+// A common task task in javascript is to iterate through an array
+// This can be done with a for loop
+// Example:
+
+// Setup
+var myArr = [ 2, 3, 4, 5, 6];
+
+var total = 0;
+
+// Loop
+for (var i = 0; i < myArr.length; i++) {
+  total += myArr[i];
 }
