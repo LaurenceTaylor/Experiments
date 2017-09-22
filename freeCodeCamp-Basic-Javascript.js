@@ -458,12 +458,30 @@ for (var i = 0; i < myArr.length; i++) {
 // This can be helpful when looping through arrays and sub-arrays
 // For example:
 
-var arr = [
-  [1,2], [3,4], [5,6]
-];
-
-for (var i=0; i < arr.length; i++) {
-  for (var j=0; j < arr[i].length; j++) {
-    console.log(arr[i][j]);
+function multiplyAll(arr) {
+  var product = 1;
+  for (var i = 0; i < arr.length; i++) {
+    for (j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
   }
+  return product;
+}
+
+// Modify values below to test your code
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Dealing with while loops
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// While loops run 'while' a specified condition is true, and stops whent that condition is no longer true
+// Example/ syntax:
+
+var ourArray = [];
+var i = 0;          // loop variable defined outside of loop
+while(i < 5) {
+  ourArray.push(i);
+  i++;              // loop variable is changed at the end of each loop
 }
