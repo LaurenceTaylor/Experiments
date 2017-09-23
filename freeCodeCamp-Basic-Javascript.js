@@ -86,6 +86,10 @@ var testString = "There are 3 cats but 4 dogs.";
 var expression = /\d+/g;    // the + allows the regular expression to extract one or more digits (e.g. 12)
 
 // \s can be used in the same way to retrieve white space
+var expression = /\s+/g;
+
+// Any match can be inverted by uppercasing the regular expression selector
+var expression = /\S/g;    // this will match anything that isn't whitespace
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // Dealing with arrays
