@@ -61,6 +61,24 @@ firstLetterOfLastName = lastName[0]; // [x] gives the character at a specific in
 
 var lastLetterOfLastName = lastName[lastName.length - 1];
 
+// Regular expressions are used to find words or patterns inside strings
+// For example:
+// Setup
+var testString = "Ada Lovelace and Charles Babbage designed the first computer and the software that would have run on it.";
+
+// Regular expression
+var expression = /the/gi;
+
+// Breakdown: 
+// /       // the start of the regular expression
+// the     // the pattern we want to match
+// /       // the close of the regular expression
+// g       // Means global - return all matches in a string, not just the first
+// i       // i for 'ignore' the case
+
+// This code counts the matches of expression in testString
+var andCount = testString.match(expression).length;
+
 /////////////////////////////////////////////////////////////////////////////////////////
 // Dealing with arrays
 /////////////////////////////////////////////////////////////////////////////////////////
