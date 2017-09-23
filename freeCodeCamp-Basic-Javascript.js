@@ -32,6 +32,12 @@ Math.floor(Math.random() * 20);
 
 // Random numbers can also be generated within a range:
 
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+
+// Call the function
+var myRandom = randomRange(5, 15);
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // Dealing with strings
