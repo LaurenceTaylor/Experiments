@@ -79,6 +79,14 @@ var expression = /the/gi;
 // This code counts the matches of expression in testString
 var andCount = testString.match(expression).length;
 
+// \d can be used in the same way, but to retrieve one digit (e.g. 0-9) from a string:
+// Setup
+var testString = "There are 3 cats but 4 dogs.";
+
+var expression = /\d+/g;    // the + allows the regular expression to extract one or more digits (e.g. 12)
+
+// \s can be used in the same way to retrieve white space
+
 /////////////////////////////////////////////////////////////////////////////////////////
 // Dealing with arrays
 /////////////////////////////////////////////////////////////////////////////////////////
