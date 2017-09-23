@@ -19,8 +19,19 @@ myVar += 3;
 // is the same as
 myVar = myVar + 3;
 
-// You can generate a random number as follows:
+// You can generate a random number between 0 and 1 as follows:
 Math.random();
+
+// If you want a random number between 0 and 19, for example, you would have to multiple:
+Math.random() * 20;
+// For 0 to 9
+Math.random() * 10;
+
+// You can also round this down to the nearest whole number using Math.floor():
+Math.floor(Math.random() * 20);
+
+// Random numbers can also be generated within a range:
+
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // Dealing with strings
