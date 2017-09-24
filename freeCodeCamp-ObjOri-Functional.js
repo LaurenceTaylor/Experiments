@@ -169,4 +169,22 @@ newArray = oldArray.concat(concatMe);     // newArray is [1, 2, 3, 4, 5, 6]
 // Used to split a string into an array
 
 // Example:
-var array = string.split('s');    // this splits 
+var array = string.split('s');    // this splits the string at every 's' character
+
+// Another:
+var string = "Split me into an array";
+var array = [];
+
+array = string.split(' ');        // this creates an array of words ["Split", "me", "into", "an", "array"]
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Joining strings with join
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// Joins each element of an array into a string seperated by whatever delimiter you provide as an argument
+// Example:
+
+var veggies = ["Celery", "Radish", "Carrot", "Potato"];
+var salad = veggies.join(" and ");
+
+console.log(salad); // "Celery and Radish and Carrot and Potato" 
