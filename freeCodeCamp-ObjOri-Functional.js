@@ -85,3 +85,37 @@ var Bike = function() {
     gear = set;
   };
 };
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Using map to iterate over arrays
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// The map method will iterate over every element of an array, creating a new array with modified values
+// It does not modify the original array
+// Example:
+
+var oldArray = [1, 2, 3];
+var timesFour = oldArray.map(function(val) {
+  return val * 4;
+});
+
+console.log(timesFour); // returns [4, 8, 12]
+console.log(oldArray);  // returns [1, 2, 3]
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Condensing arrays with reduce
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// The array method reduce is used to iterate through an array and condense it into one value.
+
+// Example:
+var array = [4,5,6,7,8];
+var singleVal = 0;
+
+singleVal = array.reduce(function(previousVal, currentVal) {    // previousVal is the accumulator, a total reduce keeps track of
+  return previousVal + currentVal;                              // currentVal is just the next element in the array
+}, 0);      // 0 is the optional second argument. It can be used to set the initial value of the accumulator
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Filtering arrays with filter
+/////////////////////////////////////////////////////////////////////////////////////////
