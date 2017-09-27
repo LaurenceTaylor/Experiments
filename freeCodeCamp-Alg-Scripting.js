@@ -45,10 +45,11 @@ function factorialize(num) {          // this solutions uses recursion instead
 /////////////////////////////////////////////////////////////////////////////////////////
 
 function palindrome(str) {
-  forward = str.replace(/[^a-zA-Z1-9]/g, '').toLowerCase();     // remove special characters, change to lower case
+  forward = str.toLowerCase().replace(/[^a-z1-9]/g, '');        // remove special characters, change to lower case
   backward = forward.split('').reverse().join('');              // reverse by splitting string, reversing then joining
   if (forward == backward) return true;                         // check if forward and backward versions match
   else return false;
 }
 
+palindrome("eye");
 palindrome("eye");
