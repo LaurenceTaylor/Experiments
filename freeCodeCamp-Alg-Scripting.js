@@ -52,4 +52,3 @@ function palindrome(str) {
 }
 
 palindrome("eye");
-palindrome("eye");
