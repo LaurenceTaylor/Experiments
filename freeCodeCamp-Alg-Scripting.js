@@ -39,3 +39,16 @@ function factorialize(num) {          // this solutions uses recursion instead
   if (num === 0) { return 1; }
   return num * factorialize(num-1);
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Check for Palindromes
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function palindrome(str) {
+  forward = str.replace(/[^a-zA-Z1-9]/g, '').toLowerCase();     // remove special characters, change to lower case
+  backward = forward.split('').reverse().join('');              // reverse by splitting string, reversing then joining
+  if (forward == backward) return true;                         // check if forward and backward versions match
+  else return false;
+}
+
+palindrome("eye");
