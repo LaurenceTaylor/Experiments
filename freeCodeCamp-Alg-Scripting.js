@@ -60,3 +60,21 @@ function palindrome(str) {
   return str.replace(/[\W_]/g, '').toLowerCase() ===
          str.replace(/[\W_]/g, '').toLowerCase().split('').reverse().join('');
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Find the Longest Word in a String
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function findLongestWord(str) {
+  var words = str.split(' ');                   // split string into separate words
+  var max = 0;
+  
+  for (var i = 0; i < words.length; i++) {      // loop which iterates through the array of words
+    if (words[i].length > max) {                // checks length of each word. If larger than max, it becomes the new max
+      max = words[i].length;
+    }
+  }
+  return max;
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
