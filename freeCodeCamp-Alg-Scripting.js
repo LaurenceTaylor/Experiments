@@ -82,3 +82,14 @@ findLongestWord("The quick brown fox jumped over the lazy dog");
 /////////////////////////////////////////////////////////////////////////////////////////
 // Title Case a Sentence
 /////////////////////////////////////////////////////////////////////////////////////////
+
+function titleCase(str) {
+  var newArray = [];
+  var array = str.toLowerCase().split(' ');
+  for (var i = 0; i < array.length; i++) {
+    newArray.push(array[i].replace(array[i][0], array[i][0].toUpperCase()));
+  }
+  return newArray.join(' ');
+}
+
+titleCase("I'm a little tea pot");
