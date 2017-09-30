@@ -122,3 +122,22 @@ function confirmEnding(str, target) {
 }
 
 confirmEnding("Bastian", "n");
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Repeat a string repeat a string
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function repeatStringNumTimes(str, num) {
+  var newString = '';
+  if (num <= 0) {
+    return '';
+  }
+  else {
+    for (i = 0; i < num; i++) {
+      newString = newString.concat(str);
+    }
+  }
+  return newString;
+}
+
+repeatStringNumTimes("abc", 3);
