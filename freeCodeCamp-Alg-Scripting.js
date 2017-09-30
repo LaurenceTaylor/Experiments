@@ -97,3 +97,18 @@ titleCase("I'm a little tea pot");
 // Return Largest Numbers in Arrays
 /////////////////////////////////////////////////////////////////////////////////////////
 
+function largestOfFour(arr) {
+  var newArray = [];
+  for (var a = 0; a < arr.length; a++) {
+    max = 0;
+    for (var b = 0; b < arr[a].length; b++) {
+      if (arr[a][b] > max) {
+        max = arr[a][b];
+      }
+    }
+    newArray.push(max);
+  }
+  return newArray;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
