@@ -157,7 +157,7 @@ function repeatStringNumTimes(str, num) {
 /////////////////////////////////////////////////////////////////////////////////////////
 
 function truncateString(str, num) {
-  if (num >= str.length) {
+  if (num >= str.length) {                      
      return str;
   }
   else if (num > 3) {
@@ -167,3 +167,12 @@ function truncateString(str, num) {
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 5);
+
+////////////////////
+// Simpler solution:
+
+function truncateString(str, num) {
+  if (str.length > num)
+    return str.slice(0, num > 3 ? num-3 : num) + '...';       // ? not used before - 
+  return str;
+}
