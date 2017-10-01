@@ -129,7 +129,7 @@ confirmEnding("Bastian", "n");
 
 function repeatStringNumTimes(str, num) {
   var newString = '';
-  if (num <= 0) {
+  if (num < 1) {                                // return '' if num is not a positive integer
     return '';
   }
   else {
@@ -141,3 +141,13 @@ function repeatStringNumTimes(str, num) {
 }
 
 repeatStringNumTimes("abc", 3);
+
+////////////////////
+// Simpler solution:
+
+function repeatStringNumTimes(str, num) {
+ if(num > 0){
+    return str.repeat(num);                    // repeat is much more elegant
+  }
+  return '';
+}
