@@ -204,18 +204,16 @@ chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
 // Solution with slice
 function slasher(arr, howMany) {
-  return arr.slice(howMany, arr.length);
+  return arr.slice(howMany, arr.length);     // N.B. I didn't need to state where to end the slice - arr.slice(howMany) would suffice.
 }
 
-// Solution with splice:
-// (the same)
+// Solution with splice
 function slasher(arr, howMany) {
-  return arr.splice(howMany, arr.length);
+  arr.splice(0, howMany); 
+  return arr;
 }
 
-// or
-function slasher(arr, howMany) {
-  var ogArray = arr;
-  ogArray.splice(0, howMany);
-  return ogArray;
-}
+/////////////////////////////////////////////////////////////////////////////////////////
+// Mutations
+/////////////////////////////////////////////////////////////////////////////////////////
+
