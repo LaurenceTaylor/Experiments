@@ -190,8 +190,7 @@ function truncateString(str, num) {
 function chunkArrayInGroups(arr, size) {
   var newArray = [];
   for (var i = 0; i < arr.length; i += size) {
-    var tempvar = arr.slice(i, i + size);
-    newArray.push(tempvar);
+    newArray.push(arr.slice(i, i + size));
   }
   return newArray;
 }
