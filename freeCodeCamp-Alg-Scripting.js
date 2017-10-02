@@ -202,3 +202,20 @@ chunkArrayInGroups(["a", "b", "c", "d"], 2);
 // Slasher Flick
 /////////////////////////////////////////////////////////////////////////////////////////
 
+// Solution with slice
+function slasher(arr, howMany) {
+  return arr.slice(howMany, arr.length);
+}
+
+// Solution with splice:
+// (the same)
+function slasher(arr, howMany) {
+  return arr.splice(howMany, arr.length);
+}
+
+// or
+function slasher(arr, howMany) {
+  var ogArray = arr;
+  ogArray.splice(0, howMany);
+  return ogArray;
+}
