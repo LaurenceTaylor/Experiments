@@ -217,3 +217,14 @@ function slasher(arr, howMany) {
 // Mutations
 /////////////////////////////////////////////////////////////////////////////////////////
 
+function mutation(arr) {
+  var status = true;                                                      // default state is true
+  for (var i = 0; i < arr[1].length; i++) {
+    if (arr[0].toLowerCase().indexOf(arr[1][i].toLowerCase()) == -1) {    // indexOf is case sensitive, so toLowerCase used
+        status = false;                                                   // if character in arr[1] not found in arr[0], status = false
+        }
+  }
+  return status;
+}
+
+mutation(["Mary", "Aarmy"]);
