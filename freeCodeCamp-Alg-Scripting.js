@@ -242,3 +242,16 @@ bouncer([7, "ate", "", false, 9]);
 // Seek and Destroy
 /////////////////////////////////////////////////////////////////////////////////////////
 
+function destroyer(arr) {
+  var args = Array.from(arguments);
+  for (i = 0; i < args[0].length; i++) {
+    for (j = 1; j < args.length; j++) {
+      if (args[0][i] === args[j]) {
+        delete args[0][i];
+      }
+    }
+  }
+  return args[0].filter(Boolean);
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
