@@ -255,3 +255,23 @@ function destroyer(arr) {
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Where do I belong
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function compareFunction(a, b) {        // prepare the compareFunction for sort
+  return a - b;
+}
+
+function getIndexToIns(arr, num) {
+  arr.sort(compareFunction);            // sort the array into ascending numerical order
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] >= num) {
+      return i;
+    }
+  }
+  return arr.length;                    // if no number in the array is greater or equal to num, return the array length
+}
+
+getIndexToIns([2, 5, 10], 15);
