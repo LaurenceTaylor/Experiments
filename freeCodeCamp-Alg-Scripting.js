@@ -280,3 +280,22 @@ getIndexToIns([2, 5, 10], 15);
 // Caesars Cipher
 /////////////////////////////////////////////////////////////////////////////////////////
 
+function rot13(str) {
+  var unCaesar = '';    // empty string to concat with un-caesared characters
+  
+  for (i = 0; i < str.length; i++) {                                      // loop through ciphered string
+    if (!/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\? .]/g.test(str[i])) {       // check if special character/ space/ full stop
+      var n = str.charCodeAt(i);                                          // identify character code
+      if (n >= 65 && n <= 77) {                                           // check which side of alphabet the letter is
+        unCaesar = unCaesar.concat(String.fromCharCode(n + 13));          // if near the start then add 13 to character code
+      }
+      else unCaesar = unCaesar.concat(String.fromCharCode(n - 13));       // if near end then subtract 13 from character code
+    }
+    else unCaesar = unCaesar.concat(str[i]);                              // if a special character then concat as-is
+  }
+  return unCaesar;
+}
+
+
+// Change the inputs below to test
+rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.");
