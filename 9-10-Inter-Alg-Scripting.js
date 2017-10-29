@@ -27,27 +27,29 @@ function sumAll(arr) {
 
 function diffArray(arr1, arr2) {
   var newArr = [];
-  for (var i = 0; i < arr1.length; i++) {
-    if (arr2.indexOf(arr1[i]) == -1) {
-      newArr.push(arr1[i]);
+  
+  function loop(first, second) {
+    for (var i = 0; i < first.length; i++) {
+      if (second.indexOf(first[i]) == -1) {                 // if value at index i of first array is not found in second array
+        newArr.push(first[i]);                              // push value at index i to new array
+      }
     }
   }
   
-  for (var j = 0; j < arr2.length; j++)
-    if (arr1.indexOf(arr2[j]) == -1) {
-       newArr.push(arr2[j]);
-    }
+  loop(arr1, arr2);                                         // run the loop once in each direction (i.e. swap arr1 and arr2 order)
+  loop(arr2, arr1);
   
   return newArr;
 }
+
 
 ////////////////////
 // Advanced solution:
 
 function diffArray(arr1, arr2) {
     return arr1
-      .filter(el => !arr2.includes(el))
+      .filter(el => !arr2.includes(el))                    // uses filter + arrow functions. Filters arr1 for what isn't in arr2
       .concat(
-        arr2.filter(el => !arr1.includes(el))
+        arr2.filter(el => !arr1.includes(el))              // concats to arr1 values in arr2 not in arr1.
       )
 }
