@@ -59,8 +59,8 @@ function diffArray(arr1, arr2) {
 /////////////////////////////////////////////////////////////////////////////////////////
 
 function convertToRoman(num) {
-  // create a javascript object with possible numeral characters
-  // '0's added to deal with 'round' numbers like 50, 500, 5000
+  // create a javascript object with possible numeral characters up to 3000 (max numeral of 3999)
+  // '0's added to deal with 'round' numbers like 50, 500, 5000; returns '' instead of undefined
   var rom = {
    '0': '','00': '','000': '','1': 'I','2': 'II','3': 'III','4': 'IV','5': 'V','6': 'VI',
    '7': 'VII','8': 'VIII','9': 'IX','10': 'X','20': 'XX','30': 'XXX','40': 'XL',
@@ -70,7 +70,7 @@ function convertToRoman(num) {
   };
  
   var str = num.toString();                                    // convert to string so num can be indexed
-  if (num < 11) {                                              // check magnitude of num to determine what numerals to add
+  if (num < 11) {                                              // check size of num to determine what magnitude of numerals to add
     return rom[str];
   }
   if (num < 100) {
