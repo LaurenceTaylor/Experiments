@@ -53,3 +53,33 @@ function diffArray(arr1, arr2) {
         arr2.filter(el => !arr1.includes(el))              // concats to arr1 values in arr2 not in arr1.
       )
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// Roman Numeral Converter
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function convertToRoman(num) {
+  // create a javascript object with possible numeral characters
+  // '0's added to deal with 'round' numbers like 50, 500, 5000
+  var rom = {
+   '0': '','00': '','000': '','1': 'I','2': 'II','3': 'III','4': 'IV','5': 'V','6': 'VI',
+   '7': 'VII','8': 'VIII','9': 'IX','10': 'X','20': 'XX','30': 'XXX','40': 'XL',
+   '50': 'L','60': 'LX','70': 'LXX','80': 'LXXX','90': 'XC','100': 'C','200': 'CC',
+   '300': 'CCC','400': 'CD','500': 'D','600': 'DC','700': 'DCC','800': 'DCCC',
+   '900': 'CM','1000': 'M','2000': 'MM','3000': 'MMM'
+  };
+ 
+  var str = num.toString();                                    // convert to string so num can be indexed
+  if (num < 11) {                                              // check magnitude of num to determine what numerals to add
+    return rom[str];
+  }
+  if (num < 100) {
+    return rom[str[0]+'0']+rom[str[1]];                        // e.g. for 56 str[0] is '5', + '0' is '50'; correct numeral retrieved
+  }                                                            // str[1] is '6', so final numeral is 'LVI'
+  if (num < 1000) {
+    return rom[str[0]+'00']+rom[str[1]+'0']+rom[str[2]];       // continue this logic for larger numbers
+  }
+  if (num < 4000) {
+    return rom[str[0]+'000']+rom[str[1]+'00']+rom[str[2]+'0']+rom[str[3]];
+  }
+}
