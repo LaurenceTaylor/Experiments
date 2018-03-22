@@ -57,8 +57,8 @@ palindrome("eye");
 // Simpler solution:
 
 function palindrome(str) {
-  return str.replace(/[\W_]/g, '').toLowerCase() ===
-         str.replace(/[\W_]/g, '').toLowerCase().split('').reverse().join('');
+  var plainString = str.replace(/[\W_]/g, '').toLowerCase();
+  return plainString === plainString.split('').reverse().join('');
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -78,6 +78,17 @@ function findLongestWord(str) {
 }
 
 findLongestWord("The quick brown fox jumped over the lazy dog");
+
+////////////////////
+// Solution with reduce:
+
+function findLongestWord(str) {
+  // split string into individual words
+  return str.split(' ').
+  reduce(function(mem, it) {
+    return Math.max(mem, it.length);
+  }, 0);
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // Title Case a Sentence
