@@ -104,6 +104,17 @@ function titleCase(str) {
 
 titleCase("I'm a little tea pot");
 
+////////////////////
+// Solution with map:
+
+function titleCase(str) {
+  var splitString = str.toLowerCase().split(' ');
+  return splitString.map(function(a) {
+    return (a.charAt(0).toUpperCase() + a.slice(1));
+    //return a.replace(a.charAt(0), a.charAt(0).toUpperCase());
+  }).join(' ');
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////
 // Return Largest Numbers in Arrays
 /////////////////////////////////////////////////////////////////////////////////////////
