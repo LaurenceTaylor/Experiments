@@ -135,6 +135,17 @@ function largestOfFour(arr) {
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
+////////////////////
+// Solution with javascript methods:
+
+function largestOfFour(arr) {
+  var result = [];
+  arr.map(function(a) {
+    result.push(a.reduce((mem, it) => Math.max(mem, it)));
+  });
+  return result;
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////
 // Confirm the Ending
 /////////////////////////////////////////////////////////////////////////////////////////
