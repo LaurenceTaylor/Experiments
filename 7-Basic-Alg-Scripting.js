@@ -223,16 +223,12 @@ truncateString("A-tisket a-tasket A green and yellow basket", 5);
 // Simpler solution:
 
 function truncateString(str, num) {
-  if (str.length > num)
-    return str.slice(0, num > 3 ? num-3 : num) + '...';       // this is a ternary operator - more below
+  var end = '...';
+  if (str.length > num) {
+    return str.slice(0, num < end.length ? num : num - end.length) + end;
+  }
   return str;
 }
-
-// Ternary operator syntax:
-// condition ? expr1 : expr2 
-
-// Condition/s evaluates to true or false.
-// expr1 and expr2 are values of any type. If true, expr1 is returned. Otherwise, expr2 is.
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // Chunky Monkey
