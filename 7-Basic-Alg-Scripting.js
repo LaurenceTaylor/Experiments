@@ -247,9 +247,7 @@ function chunkArrayInGroups(arr, size) {
 /////////////////////////////////////////////////////////////////////////////////////////
 
 // Solution with slice
-function slasher(arr, howMany) {
-  return arr.slice(howMany, arr.length);     // N.B. I didn't need to state where to end the slice - arr.slice(howMany) would suffice.
-}
+var slasher = (arr, howMany) => arr.slice(howMany);
 
 // Solution with splice
 function slasher(arr, howMany) {
