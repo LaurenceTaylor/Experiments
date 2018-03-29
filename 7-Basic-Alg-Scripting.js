@@ -260,10 +260,9 @@ function slasher(arr, howMany) {
 /////////////////////////////////////////////////////////////////////////////////////////
 
 function mutation(arr) {
-  for (var i = 0; i < arr[1].length; i++) {
-    if (arr[0].toLowerCase().indexOf(arr[1][i].toLowerCase()) == -1) {    // indexOf is case sensitive, so toLowerCase used
-        return false;                                                     // if character in arr[1] not found in arr[0], return false
-        }
+  var a = arr.map(a => a.toLowerCase());
+  for (var i = 0; i < a[1].length; i++) {
+    if (a[0].indexOf(a[1][i]) == -1) { return false; }
   }
   return true;
 }
