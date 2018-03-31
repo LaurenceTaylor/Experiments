@@ -273,9 +273,7 @@ mutation(["Mary", "Aarmy"]);
 // Falsy Bouncer
 /////////////////////////////////////////////////////////////////////////////////////////
 
-function bouncer(arr) {
-  return arr.filter(Boolean);             // Boolean returns true for truthy values and false for falsy ones
-}
+var bouncer = arr => arr.filter(Boolean);
 
 bouncer([7, "ate", "", false, 9]);
 
