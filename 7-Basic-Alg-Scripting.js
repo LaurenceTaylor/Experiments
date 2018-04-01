@@ -14,9 +14,7 @@ reverseString("Greetings from Earth");
 ////////////////////
 // Simpler solution:
 
-function reverseString(str) {
-  return str.split('').reverse().join('');
-}
+var reverseString = str => str.split('').reverse().join('');
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // Factorialize a Number
@@ -294,6 +292,17 @@ function destroyer(arr) {
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+////////////////////
+// Simpler solution/ attempt 2:
+
+function destroyer(arr) {
+  var result = arr;
+  for (var i = 1; i < arguments.length; i++) {
+    result = result.filter(a => a != arguments[i]);
+  }
+  return result;
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // Where do I belong
