@@ -374,3 +374,17 @@ function rot13(str) {
 
 // Change the inputs below to test
 rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.");
+
+////////////////////
+// Second attempt:
+
+function rot13(str) {
+  var result = '';
+  for (var i = 0; i < str.length; i++) {
+    if (/[A-Z]/g.test(str[i])) {
+      result += String.fromCharCode(str[i].charCodeAt() + (str[i] < 'N' ? 13 : -13));
+    }
+    else result += str[i];
+  }
+  return result;
+}
