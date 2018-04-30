@@ -10,6 +10,8 @@ function sumAll(arr) {
   return total;
 }
 
+
+
 ////////////////////
 // Advanced solution:
 
